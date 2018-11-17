@@ -1,3 +1,8 @@
+<?php
+      session_start();
+      $type =$_SESSION['user_Type'];
+      $user_id =$_SESSION['id'];
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,12 +17,15 @@
         $mysqli = new mysqli("localhost", "root", "", "therapysite");
         $query = "SELECT s.professional_id, s.next_session, s.next_time
                  FROM session s
-                 WHERE s.client_id =1";
+                 Join client c on c.client_id = s.client_id
+                  Join user u on u.id = c.user_id
+                 WHERE u.id =$user_id";
         if ($result=mysqli_query($mysqli,$query))
           {
         // Fetch one and one row
             while ($row=mysqli_fetch_row($result))
             {
+  
               $professional_id = $row[0];
               $next_session = $row[1];
               $next_time = $row[2];
@@ -52,16 +60,13 @@
             <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../profile/profileProfessional.php">Profesional Profile</a>
+            <a class="nav-link" href="../profile/profile-<?php echo $type?>.php">Profile</a>
           </li> 
-         <li class="nav-item">
-            <a class="nav-link" href="../profile/profileClient.php">Client Profile</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Your sessions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Connect with a Professional</a>
+            <a class="nav-link" href="../SearchPage/index.php">Connect with a Professional</a>
           </li>
         </ul>
       </div>

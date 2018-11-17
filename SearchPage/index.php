@@ -1,5 +1,8 @@
 <?php
   require_once('search.php');
+  session_start();
+  $type =$_SESSION['user_Type'];
+  $user_id =$_SESSION['id'];
   if(isset($_REQUEST['Name'])){
     $inresult = getProf();
   }
@@ -28,11 +31,8 @@
             <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../profile/profileProfessional.php">Profesional Profile</a>
+            <a class="nav-link" href="../profile/profile-<?php echo $type?>.php">Profile</a>
           </li> 
-         <li class="nav-item">
-            <a class="nav-link" href="../profile/profileClient.php">Client Profile</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="../sessions/sessions.php">Your sessions</a>
           </li>

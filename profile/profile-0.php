@@ -1,3 +1,8 @@
+<?php
+      session_start();
+      $type =$_SESSION['user_Type'];
+      $user_id =$_SESSION['id']
+?>
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +20,8 @@
   $username = "root";
   $password = "";
   $dbname = "therapysite";
-
+  $type =$_SESSION['user_Type'];
+  $user_id =$_SESSION['id']
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
   // Check connection
@@ -26,7 +32,7 @@
   $sql = "SELECT p.user_id, p.location, p.school, p.bio, u.fName, u.lName 
           FROM professional p
           JOIN user u ON p.user_id=u.id
-          WHERE p.user_id =4
+          WHERE p.user_id =$user_id;
           ";
     if ($result=mysqli_query($conn,$sql))
     {
@@ -55,10 +61,7 @@
             <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="profileProfessional.php">Profesional Profile</a>
-          </li> 
-         <li class="nav-item">
-            <a class="nav-link" href="profileClient.php">Client Profile</a>
+            <a class="nav-link" href="#"> Profile</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../sessions/sessions.php">Your sessions</a>
