@@ -1,17 +1,16 @@
 function openTab(e, tabID){
   //TODO error: element never reappears
   var i, tabcontents;
-  tabcontents = document.getElementsByClassName("tab-content");
+  tabcontents = document.getElementsByClassName("tab");
   for(i = 0; i < tabcontents.length; i++){
     tabcontents[i].className = tabcontents[i].className.replace(" active", "");
   }
-  /*
-  if(tabID === login){
-    document.getElementById("login-content").className += " active";
+  if(tabID === 'login'){
+    document.getElementById("login").className += " active";
   }
-  if(tabID === signup){
-    document.getElementById("signup-content").className += " active";
-  }*/
+  if(tabID === 'signup'){
+    document.getElementById("signup").className += " active";
+  }
 }
 
 function submitData(){
