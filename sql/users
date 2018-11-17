@@ -1,0 +1,11 @@
+INSERT INTO `user`(`fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)
+ VALUES ("Elizabeth", "Howell", "erhowell15@gmail.com", "little15", 1, 1);
+
+ INSERT INTO `user`(`fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)
+ VALUES ("John", "Smith", "jSmith@gmail.com", "root", 1, 1);
+
+ INSERT INTO `user`(`fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)
+ VALUES ("Dane", "Chair", "dar@gmail.com", "root", 1, 0);
+
+ INSERT INTO `user`(`fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)
+ VALUES ("Jane", "Smith", "janeS@gmail.com", "root", 1, 1);
