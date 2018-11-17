@@ -10,7 +10,6 @@
 
 <body>
 	<div class="parent">
-    <div id="main-content">
         <button class="top" onclick="openTab(event, 'login')">
           Log In
         </button>
@@ -61,7 +60,6 @@
           <button class="submit" onclick="submitSignupData()">Submit</button>
         </div>
       <!--/form-->
-    </div>
   </div>
   <script src="script.js"></script>
   </body>

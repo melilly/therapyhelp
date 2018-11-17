@@ -1,10 +1,16 @@
+body{
+  font-family: "Georgia";
+}
+
 .parent{
   margin: 40px;
   padding: 8px;
   box-shadow: 0px 6px 12px;
   background: #dbfbff;
-  border: #011361;
+  border-color: #0e227e;
   border-width: 10px;
+  border-style: ridge;
+  cursor: default;
 }
 .parent .tab{
   display: none;
@@ -16,6 +22,9 @@
 .top{
   width: 50%;
   float: left;
+  border-style: none none double none;
+  border-width: 5px;
+  background: #00000000;
 }
 
 h1{
@@ -33,14 +42,22 @@ label{
 input{
   width: 90%;
   margin: 2% 5%;
+  cursor: text;
 }
 
 button.submit{
-  margin-top: 20px;
-  width: 100%;
+  margin: 20px 20% 15px;
+  width: 60%;
+  background: #3a9ec594;
+  box-shadow: 0px 2px 4px;
+  border-style: inset;
+  border-radius: 4px;
 }
 
 button{
   padding: 10px 0px;
-  background: #ffffff00;
+  border-color: #010c3d;
+  letter-spacing: 3px;
+  font-size: 20px;
+  cursor:pointer;
 }
