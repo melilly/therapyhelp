@@ -11,15 +11,15 @@
 <body>
 	<div class="parent">
 		<div id="top-content">
-      <button onclick="openTab(event, login)">
+      <button onclick="openTab(event, 'login')">
         Log In
       </button>
-      <button onclick="openTab(event, signup)">
+      <button onclick="openTab(event, 'signup')">
         Sign Up
       </button>
     </div>
     <div id="main-content">
-      <div class="active" id="login">
+      <div class="tab active" id="login">
         <h1>Log In To Your Account</h1>
         <div class="field">
           <label id="email">Email</label>
@@ -30,7 +30,7 @@
           <input type="text"/>
         </div>
       </div>
-      <div id="signup">
+      <div class="tab" id="signup">
         <h1>Create Your Account</h1>
         <div class="field">
           <label id="fname">First Name</label>

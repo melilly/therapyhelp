@@ -14,7 +14,7 @@
   padding: 20px 0px;
 }
 
-#main-content div{
+#main-content .tab{
   background: #ff9999;
   display: none;
 }
