@@ -1,0 +1,63 @@
+html, body{
+    height: 100%;
+    width: 100%;
+
+}
+
+
+.background{
+    background-position: center;
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/jPLiQ-9/mountains-background-for-titles-intro-projects-and-etc_ew22rur3l__F0000.png');
+    height: 125%;
+    width: 100%;
+    
+}
+
+.intro{
+    font: italic bold, Georgia, serif;
+    font-size: 200%;
+
+}
+
+.therapybutton{
+    width: 50%;
+    height: 20%;
+    padding: 0% 25%;
+}
+
+.information{
+    float: left;
+    margin: 4 px;
+    width: 40%;
+    height: auto;
+
+}
+.treatments{
+    float: left;
+    width: 40%;
+    height: auto;
+
+}
+a:link {
+    color: white; 
+    background-color: transparent; 
+    text-decoration: none;
+}
+
+a:visited {
+    color:white;
+    background-color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}

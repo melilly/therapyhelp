@@ -9,8 +9,7 @@ function formatDate(date, time) {
   var day = date.getDate();
   var monthIndex = date.getMonth();
   var year = date.getFullYear();
-  var nTime = time.getTime();
-   document.getElementById("date").innerText = 'Your Next appointment is' + day + ' ' + monthNames[monthIndex] + ' ' + year + ' at ' + nTime;
+   document.getElementById("date").innerText = 'Your Next appointment is ' + day + ' ' + monthNames[monthIndex] + ' ' + year;
 }
 
 console.log(formatDate(new Date())); 

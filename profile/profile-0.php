@@ -1,3 +1,8 @@
+<?php
+      session_start();
+      $type =$_SESSION['user_Type'];
+      $user_id =$_SESSION['id']
+?>
 <!DOCTYPE html>
 <html>
 
@@ -7,7 +12,7 @@
 	<title>Profile</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
-	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="professionalstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <?php
@@ -15,7 +20,6 @@
   $username = "root";
   $password = "";
   $dbname = "therapysite";
-
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
   // Check connection
@@ -26,7 +30,7 @@
   $sql = "SELECT p.user_id, p.location, p.school, p.bio, u.fName, u.lName 
           FROM professional p
           JOIN user u ON p.user_id=u.id
-          WHERE p.user_id =4
+          WHERE p.user_id =$user_id;
           ";
     if ($result=mysqli_query($conn,$sql))
     {
@@ -44,24 +48,24 @@
 
   $conn->close();
   ?> 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">Therapist</a>
+        <a class="navbar-brand" href="../index.php">FEEL GOOD INC</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="profile/profile.php">Your Profile</a>
+            <a class="nav-link" href="#"> Profile</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../sessions/sessions.php">Your sessions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../SearchPage/index.php">Connect with a Professional</a>
+            <a class="nav-link" href="#">Connect with a Professional</a>
           </li>
         </ul>
       </div>
@@ -72,7 +76,12 @@
     </div>
     <div class="profile">
         <h4 class="profileHeading"><span>Professional</span></h4><hr/>
-		<button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">Edit Profile</a></button>
+    <button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">Edit Profile</a></button>
+    <div class="profileinfo">
+    <div class="photo">
+       <img class="photo" src= "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"; >
+  
+    </div>
         <p><span style="color:#9c47e6;font-weight:bold">Name:</span><?php echo $name?> </p>
         <p><span style="color:#9c47e6;font-weight:bold">Type of Practice:</span> Therapy</p>
         <p><span style="color:#9c47e6;font-weight:bold">Specialties: </span> Anxiety, depression, bipolar</p>
@@ -80,7 +89,8 @@
         <p><span style="color:#9c47e6;font-weight:bold">Biography:</span> <?php echo $bio?></p>
         <p><span style="color:#9c47e6;font-weight:bold">Hourly Rate:</span> $75</p>
         <p><span style="color:#9c47e6;font-weight:bold">Location:</span> <?php echo $location?></p><hr/>
-        </div>
+     </div>
+      </div>
     </div>   
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

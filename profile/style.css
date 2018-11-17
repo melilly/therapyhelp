@@ -11,10 +11,13 @@ div.header {
   text-align: center;
 }
 
-div.profile {
-  
+.photo{
+  width: 175px;
+  height: 175px;
 }
+.profileinfo{
+  width: auto;
+  height: auto;
+  margin: 2px;
 
-h4.profileHeading {
-  
 }
