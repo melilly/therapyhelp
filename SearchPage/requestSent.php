@@ -19,7 +19,6 @@
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
          $sql = "INSERT INTO `requests`(`user_id`, `professional_id`, `date`, `accepted`) VALUES ($user_id, $pro, $date('Y/m/d'),0 )";
-         die($sql);
         if ($conn->query($sql) === TRUE) {
         echo '<script language="javascript">';
         echo 'alert("message successfully sent")';

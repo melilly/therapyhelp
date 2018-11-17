@@ -1,8 +1,10 @@
 <?php
   require_once('search.php');
+  
   session_start();
   $type =$_SESSION['user_Type'];
   $user_id =$_SESSION['id'];
+
   if(isset($_REQUEST['Name'])){
     $inresult = getProf();
   }if(isset($_REQUEST['professional'])){
