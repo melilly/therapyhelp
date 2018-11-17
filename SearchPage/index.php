@@ -65,8 +65,11 @@
        
             <input type="text" placeholder="Maximum Hourly rate.." name="maxRate">
        </div>
-        <p> Specialties</p>
-        <ul>
+        <label> Specialties</label>
+        <div>
+           <input type="text" placeholder="Specialties" name="specialties">
+        </div>
+          <ul>
          <?php
             $servername = "localhost";
             $username = "root";

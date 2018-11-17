@@ -80,6 +80,7 @@
     </div>
         <p><span style="color:#9c47e6;font-weight:bold">Name:</span><?php echo $name?> </p>
         <p><span style="color:#9c47e6;font-weight:bold">Type of Practice:</span> Therapy</p>
+        <p><span style="color:#9c47e6;font-weight:bold">Location:</span> Logan, Utah</p>
         <p><span style="color:#9c47e6;font-weight:bold">Specialties: </span> Anxiety, depression, bipolar</p>
         <p><span style="color:#9c47e6;font-weight:bold">School:</span> <?php echo $school?></p>
         <p><span style="color:#9c47e6;font-weight:bold">Biography:</span> <?php echo $bio?></p>
