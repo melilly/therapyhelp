@@ -21,7 +21,7 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="profile/profile.html">Your Profile</a>
+            <a class="nav-link" href="profile/profile.php">Your Profile</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="sessions/sessions.php">Your sessions</a>
