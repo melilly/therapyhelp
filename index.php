@@ -25,7 +25,7 @@
             <a class="nav-link" href="sessions/sessions.php">Your sessions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Connect with a Professional</a>
+            <a class="nav-link" href="searchPage/index.html">Connect with a Professional</a>
           </li>
         </ul>
       </div>
