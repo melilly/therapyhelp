@@ -41,7 +41,7 @@
     </div>
     <div class="profile">
         <h4 class="profileHeading"><span>Professional</span></h4><hr/>
-		<button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">edit profile</button>
+		<button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">edit profile</a></button>
         <p><span style="color:#9c47e6;font-weight:bold">Name:</span> Dr. John Smith</p>
         <p><span style="color:#9c47e6;font-weight:bold">Type of Practice:</span> Therapy</p>
         <p><span style="color:#9c47e6;font-weight:bold">Specialties: </span> Anxiety, depression, bipolar</p>
