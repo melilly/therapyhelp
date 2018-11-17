@@ -7,6 +7,14 @@ function openTab(e, tabID){
   document.getElementById(tabID).className += " active";
 }
 
+function submitLoginData(){
+  var fields, email, pw;
+  fields = document.getElementById("login");
+  email = fields.getElementsByClassName("email")[0].value;
+  pw = fields.getElementsByClassName("pw")[0].value;
+  alert("log on submitted! email: " + email + " and pw: " + pw);
+}
+function submitSignupData(){
   var fields, first, last, email, pw, verifypw;
   fields = document.getElementById("signup");
   first = fields.getElementsByClassName("fname")[0].value;

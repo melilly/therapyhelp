@@ -59,6 +59,7 @@
             <li>Client</li>
           </ul>
         </div>
+        <button class="submit" onclick="submitSignupData()">Submit</button>
       </div>
     </div>
   </div>
