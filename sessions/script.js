@@ -10,7 +10,7 @@ function formatDate(date, time) {
   var monthIndex = date.getMonth();
   var year = date.getFullYear();
   var nTime = time.getTime();
-   document.getElementById("date").innerText = 'Your Next appointment is' + day + ' ' + monthNames[monthIndex] + ' ' + year + ' at ' + time;
+   document.getElementById("date").innerText = 'Your Next appointment is' + day + ' ' + monthNames[monthIndex] + ' ' + year + ' at ' + nTime;
 }
 
 console.log(formatDate(new Date())); 
