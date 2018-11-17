@@ -6,29 +6,16 @@ body,html{
 }
 
 
+
 #searchbox{
   width: 25%;
   height: 100%;
   border: 1px black solid;
   background-color: rgb(224, 221, 221);
   float:left;
-  line-height: 1.49;
-  color: #9c47e6;
-
 }
 .searchBar{
   float: left;
-
-}
-
-.container{
-  background-color: #04d8e770;
-  border: 1px solid black;
-  
-}
-
-#results{
-
 
 
 }
