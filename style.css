@@ -19,21 +19,11 @@ html, body{
 }
 
 .therapybutton{
-    width 50%;
+    width: 50%;
     height: 20%;
-    padding: 0% 25% ;
+    padding: 0% 25%;
+}
 
-    float: none;
-}
-.button{
-    background-color: yellow;
-    border: orange;
-    color: yellow;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
 .information{
     float: left;
     margin: 4 px;
@@ -48,7 +38,7 @@ html, body{
 
 }
 a:link {
-    color: black; 
+    color: white; 
     background-color: transparent; 
     text-decoration: none;
 }
@@ -69,4 +59,10 @@ a:active {
     color: yellow;
     background-color: transparent;
     text-decoration: underline;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: yellow;
+    display: inline-block;
 }
