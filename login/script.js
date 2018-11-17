@@ -14,7 +14,6 @@ function submitData(){
   }
   if(document.getElementById("signup").className.includes("active")){
     submitSignupData();
-  }
 }
 function submitLoginData(){
   var fields, email, pw;
