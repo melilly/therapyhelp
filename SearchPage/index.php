@@ -36,20 +36,30 @@
     <div class="container"  id="searchbox">
         <h1>Find a Professional</h1>
         <div class="search">
+        <label> Name</label>
           <div class="name">
+          
             <input type="text" placeholder="Name..." name="Name">
       </div>
+      <label> Location</label>
        <div class="Location">
+      
           <input type="text" placeholder="Location..." name="Location">
            <label class="checkbox"> 
             <input type="checkbox" checked="checked">
             Online only
            </label>
        </div>
+       <label>Minimum Hourly Rate</label>
        <div class="Hourly">
+      
           <input type="text" placeholder="Minimum Hourly rate.." name="Hourly rate minimum">
+     </div>
+     <label> Maximum Hourly Rate</label>
+     <div> 
+     
           <input type="text" placeholder="Maximum Hourly rate.." name="Hourly rate maximum">
-        </div>
+     </div>
       <p> Specialties</p>
       <div>
            <label class="checkbox"> 
