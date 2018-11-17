@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>repl.it</title>
+	<title>Profile</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
 	<link href="style.css" rel="stylesheet" type="text/css" />
@@ -38,6 +38,7 @@
     </div>
     <div class="profile">
         <h4 class="profileHeading"><span>Professional</span></h4><hr/>
+		<button type="button" class="btn btn-outline-dark">Dark</button>
         <p><span style="color:#9c47e6;font-weight:bold">Name:</span> Dr. John Smith</p>
         <p><span style="color:#9c47e6;font-weight:bold">Type of Practice:</span> Therapy</p>
         <p><span style="color:#9c47e6;font-weight:bold">Specialties: </span> Anxiety, depression, bipolar</p>
@@ -48,6 +49,7 @@
         </div>
         <div class="profile">
         <h4 class="profileHeading"><span>Client</span></h4><hr/>
+		<button type="button" class="btn btn-outline-dark">Dark</button>
         <p><span style="color:#9c47e6;font-weight:bold">Name:</span> Mary Jane</p>
         <p><span style="color:#9c47e6;font-weight:bold">Biography:</span> Sample bio</p>
         <p><span style="color:#9c47e6;font-weight:bold">Location:</span> Logan, Utah</p>
