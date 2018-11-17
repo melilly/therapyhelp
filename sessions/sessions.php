@@ -8,9 +8,9 @@
   </head>
   <body>
      <?php
-        $professional_id = $name = $next_session ="";
+        $professional_id = $name = $next_session=$next_time ="";
         $mysqli = new mysqli("localhost", "root", "", "therapysite");
-        $query = "SELECT s.professional_id, s.next_session
+        $query = "SELECT s.professional_id, s.next_session, s.next_time
                  FROM session s
                  WHERE s.client_id =1";
         if ($result=mysqli_query($mysqli,$query))
@@ -20,6 +20,7 @@
             {
               $professional_id = $row[0];
               $next_session = $row[1];
+              $next_time = $row[2];
             }
         // Free result set
         mysqli_free_result($result);
@@ -80,14 +81,48 @@
           </div>
         </div>
         <div class="col">
-          <h3>Your Next Appointment: <?php echo $next_session?></h3>
-          <button type="button" class="btn btn-primary">Schedule an Appointment</button>
+          <h3 id="date">Your Next Appointment:</h3>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              Schedule an appointment
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="start">Start date:</label>
+
+            <input type="date" id="start" name="trip-start"
+                value=<?php echo $next_session?>
+                min="2018-01-01" max="2020-12-31">
+          <div style="display: block;">
+           <label for="appt">Choose a time for your meeting:</label>
+           <input type="time" id="appt" name="appt"
+              min="9:00" max="18:00" value="<?php echo $next_time?>" required>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
         </div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+    <script type="text/javascript" src="script.js">
+      var date = <?php echo $next_session?>;
+      var time = <?php echo $next_time?>;
+      document.getElementById("date").addEventListener("load", formatDate(date,time));
+    </script>
   </body>
 </html>
