@@ -14,11 +14,11 @@
   padding: 20px 0px;
 }
 
-.tab-content{
+#main-content div{
   background: #ff9999;
   display: none;
 }
-.tab-content.active{
+#main-content .active{
   display: block;
 }
 

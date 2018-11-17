@@ -19,7 +19,7 @@
       </button>
     </div>
     <div id="main-content">
-      <div class="tab-content active" id="login-content">
+      <div class="active" id="login">
         <h1>Log In To Your Account</h1>
         <div class="field">
           <label id="email">Email</label>
@@ -30,7 +30,7 @@
           <input type="text"/>
         </div>
       </div>
-      <div class="tab-content" id="signup-content">
+      <div id="signup">
         <h1>Create Your Account</h1>
         <div class="field">
           <label id="fname">First Name</label>
