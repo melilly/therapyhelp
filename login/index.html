@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div class="box">
+		<div class="box-section">
+      <button class="tab" onclick="openTab(event, login)">
+        Log In
+      </button>
+      <button class="tab" onclick="openTab(event, signup)">
+        Sign Up
+      </button>
+    </div>
+    <div class="box-section" id="main-content">
+      <div class="tab-content" id="signup">
+        <h1>Create Your Account</h1>
+        <div class="field">
+          <label class="signup-field" id="fname">First Name</label>
+          <input type="text"/>
+        </div>
+        <div class="field">
+          <label class="signup-field" id="lname">Last Name</label>
+          <input type="text"/>
+        </div>
+        <div class="field">
+          <label class="signup-field" id="email">Email</label>
+          <input type="email"/>
+        </div>
+        <div class="field">
+          <label class="signup-field" id="pw">Password</label>
+          <input type="text"/>
+        </div>
+        <div class="field">
+          <label class="signup-field" id="pw-again">Retype Password</label>
+          <input type="text"/>
+        </div>
+        <div>
+          <ul>
+            <li>Professional</li>
+            <li>Client</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-content" id="login">
+        <h1>Log In To Your Account</h1>
+        <div class="field">
+          <label class="login-field" id="email">Email</label>
+          <input type="email"/>
+        </div>
+        <div class="field">
+          <label class="login-field" id="pw">Password</label>
+          <input type="text"/>
+        </div>
+      </div>
+      <div>
+        <button class="submit" onclick="submitData()">Submit</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
