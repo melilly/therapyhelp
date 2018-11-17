@@ -21,6 +21,7 @@
     <div id="main-content">
       <div class="tab active" id="login">
         <h1>Log In To Your Account</h1>
+        
         <form action="check.php" method="POST">
           <div class="field">
           <label>Email</label>
@@ -33,6 +34,8 @@
         <input type="submit" name="submit" value="Submit"> 
         </form>
       </div>
+
+
       <div class="tab" id="signup">
         <h1>Create Your Account</h1>
         <div class="field">
