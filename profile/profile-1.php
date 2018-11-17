@@ -20,7 +20,7 @@
   $username = "root";
   $password = "";
   $dbname = "therapysite";
-
+  $location = $school =$bio =$name ="";
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
   // Check connection
@@ -31,7 +31,7 @@
   $sql = "SELECT p.user_id, p.location, p.school, p.bio, u.fName, u.lName 
           FROM professional p
           JOIN user u ON p.user_id=u.id
-          WHERE p.user_id =4
+          WHERE p.user_id =$user_id
           ";
     if ($result=mysqli_query($conn,$sql))
     {
@@ -83,7 +83,7 @@
        <img class="photo" src= "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"; >
   
     </div>
-        <p><span style="color:#9c47e6;font-weight:bold">Name:</span> $name</p>
+        <p><span style="color:#9c47e6;font-weight:bold">Name:</span> <?php echo $name?></p>
 
      </div>
       </div>

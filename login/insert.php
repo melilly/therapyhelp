@@ -24,6 +24,7 @@ $isClient = mysqli_real_escape_string($conn, $_REQUEST['type']);
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
+    echo "<script>window.location = 'index.php'</script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

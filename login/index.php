@@ -57,10 +57,14 @@
           <label>Retype Password</label>
           <input class="pw" type="text"/>
         </div>
-        <ul>
-          <li style="list-style: none">  <input type="radio" name="type" value="1"> Seeking Help</li>
-          <li style="list-style: none"><input type="radio" name="type" value="0"> Wanting To help</li></li>
-        </ul>
+        <div class="rad">
+          <label>Seeking Help</label>
+          <input type="radio" name="type" value="1">
+        </div>
+        <div class="rad" >
+          <label>Wanting To help</label>
+          <input type="radio" name="type" value="0">
+        </div>
         <input type="submit" name="submit" value="Submit"> 
         </form>
       </div>

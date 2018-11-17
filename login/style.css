@@ -1,5 +1,10 @@
+body, html{
+  width: 100%;
+  height: 100%;
+}
 .parent{
-  margin: 40px;
+  width: 60%;
+  margin: auto;
   background: #ffffcc;
   padding: 8px;
 }
@@ -21,17 +26,14 @@
 #main-content .active{
   display: block;
 }
+.rad{
+  width: 40%;
+}
 
 h1{
   text-align: center;
 }
 
-label{
-  position:absolute;
-  transform: translate(2px, 1px);
-  margin-left: 5%;
-  margin-top: 2%;
-}
 
 input{
   width: 90%;
