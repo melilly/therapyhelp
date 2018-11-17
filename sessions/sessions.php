@@ -22,6 +22,7 @@
               $next_session = $row[1];
               $next_time = $row[2];
             }
+
         // Free result set
         mysqli_free_result($result);
         }
@@ -72,17 +73,10 @@
       <div class="row">
         <div class="col">
           <h3>Your Professional:<?php echo $name?> </h3>
-          <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div>
         </div>
         <div class="col">
           <h3 id="date">Your Next Appointment:</h3>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          <button  class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
               Schedule an appointment
           </button>
         </div>
@@ -98,20 +92,18 @@
             </button>
           </div>
           <div class="modal-body">
-            <label for="start">Start date:</label>
-
-            <input type="date" id="start" name="trip-start"
+            <form method="POST" action="setTime.php">
+              <label for="start">Start date:</label>
+              <input type="date" id="start" name="dateNext"
                 value=<?php echo $next_session?>
                 min="2018-01-01" max="2020-12-31">
-          <div style="display: block;">
+            <div style="display: block;">
            <label for="appt">Choose a time for your meeting:</label>
            <input type="time" id="appt" name="appt"
               min="9:00" max="18:00" value="<?php echo $next_time?>" required>
           </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <input type="button" name="submit" value="Submit">Save changes</button>
+            </form>
           </div>
         </div>
       </div>
@@ -120,9 +112,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script type="text/javascript" src="script.js">
-      var date = <?php echo $next_session?>;
-      var time = <?php echo $next_time?>;
-      document.getElementById("date").addEventListener("load", formatDate(date,time));
+      var date = <?php echo '$next_session' ?>;
+      var Ntime = <?php echo "$next_time" ?>;
+      document.getElementById("date").addEventListener("load", formatDate(date,Ntime));
     </script>
   </body>
 </html>
