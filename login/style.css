@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
   font-family: "Georgia";
 }
@@ -16,6 +17,17 @@ body{
 }
 .parent .active{
   display: block;
+=======
+body, html{
+  width: 100%;
+  height: 100%;
+}
+.parent{
+  width: 60%;
+  margin: auto;
+  background: #ffffcc;
+  padding: 8px;
+>>>>>>> 27e698a9b6740d5aebbd770ca19f2fe837aae6d0
 }
 
 .top{
@@ -29,16 +41,22 @@ body{
 .top.active{
   background: #00000000;
 }
+.rad{
+  width: 40%;
+}
 
 h1{
   padding-top: 40px;
   text-align: center;
 }
 
+<<<<<<< HEAD
 .field{
   font-size: 16px;
   font-family: "Tahoma";
 }
+=======
+>>>>>>> 27e698a9b6740d5aebbd770ca19f2fe837aae6d0
 
 input:not([type='radio']){
   width: 90%;

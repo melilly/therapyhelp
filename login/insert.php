@@ -20,12 +20,22 @@ $email = mysqli_real_escape_string($conn, $_REQUEST['email']);
 $password = mysqli_real_escape_string($conn, $_REQUEST['pw']);
 $isClient = mysqli_real_escape_string($conn, $_REQUEST['type']);
 // Attempt insert query execution
+<<<<<<< HEAD
 //$sql = "INSERT INTO `user`( `fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)
         //VALUES ()"
 if($link->query($sql)){
     echo "Records added successfully.";
 } else{
     echo "ERROR: Could not to execute $sql. " . $link->error;
+=======
+ $sql = "INSERT INTO `user`( `fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)VALUES ('$first_name', '$last_name', '$email',' $password', 1, $isClient)";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+    echo "<script>window.location = 'index.php'</script>";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+>>>>>>> 27e698a9b6740d5aebbd770ca19f2fe837aae6d0
 }
  
 // Close connection
