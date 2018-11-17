@@ -22,13 +22,13 @@
             <a class="nav-link" href="profile/profileProfessional.php">Profesional Profile</a>
           </li> 
          <li class="nav-item">
-            <a class="nav-link" href="profile/profileClient.php">Client Profile</a>
+            <a class="nav-link" href="/profile/profileClient.php">Client Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sessions/sessions.php">Your sessions</a>
+            <a class="nav-link" href="/sessions/sessions.php">Your sessions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="SearchPage/index.php">Connect with a Professional</a>
+            <a class="nav-link" href="/SearchPage/index.php">Connect with a Professional</a>
           </li>
         </ul>
       </div>
