@@ -36,22 +36,9 @@
      <div class="header">
         <h1><span>Profile</span></h1><hr/>
     </div>
-    <div class="profile">
-        <h4 class="profileHeading"><span>Professional</span></h4><hr/>
-        <p><span style="color:#9c47e6;font-weight:bold">Name:</span> Dr. John Smith</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Type of Practice:</span> Therapy</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Specialties: </span> Anxiety, depression, bipolar</p>
-        <p><span style="color:#9c47e6;font-weight:bold">School:</span> Utah State University</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Biography:</span> Sample bio</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Hourly Rate:</span> $75</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Location:</span> Logan, Utah</p><hr/>
-        </div>
-        <div class="profile">
-        <h4 class="profileHeading"><span>Client</span></h4><hr/>
-        <p><span style="color:#9c47e6;font-weight:bold">Name:</span> Mary Jane</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Biography:</span> Sample bio</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Location:</span> Logan, Utah</p>
-    </div>   
+    <div>
+      
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
