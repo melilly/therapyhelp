@@ -32,3 +32,6 @@ function submitSignupData(){
   verifypw = fields.getElementsByClassName("pw")[1].value;
   alert("signup submitted! last: " + last + " and pw 1&2: " + pw + " " + verifypw);
 }
+
+document.getElementById("signU").addEventListener("click",openTab(e, "signup"));
+document.getElementById("log").addEventListener("click",openTab(e, "login"));

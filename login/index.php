@@ -21,14 +21,17 @@
     <div id="main-content">
       <div class="tab active" id="login">
         <h1>Log In To Your Account</h1>
-        <div class="field">
+        <form action="check.php" method="POST">
+          <div class="field">
           <label>Email</label>
-          <input class="email" type="email"/>
+          <input class="email" type="email" name="email"/>
         </div>
         <div class="field">
           <label>Password</label>
-          <input class="pw" type="text"/>
+          <input class="pw" type="text" name="Password"/>
         </div>
+        <input type="submit" name="submit" value="Submit"> 
+        </form>
       </div>
       <div class="tab" id="signup">
         <h1>Create Your Account</h1>
@@ -59,7 +62,6 @@
           </ul>
         </div>
       </div>
-      <button class="submit" onclick="submitData()">Submit</button>
     </div>
   </div>
   <script src="script.js"></script>
