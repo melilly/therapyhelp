@@ -22,7 +22,6 @@ function submitSignupData(){
   email = fields.getElementsByClassName("email")[0].value;
   pw = fields.getElementsByClassName("pw")[0].value;
   verifypw = fields.getElementsByClassName("pw")[1].value;
-<<<<<<< HEAD
   if(fields.getElementsByClassName("account-type")[0].checked){
     account = fields.getElementsByClassName("account-type")[0].value;
   }
@@ -31,10 +30,3 @@ function submitSignupData(){
   }
   alert("signup submitted! last: " + last + " and account type: " + account);
 }
-=======
-  alert("signup submitted! last: " + last + " and pw 1&2: " + pw + " " + verifypw);
-}
-
-document.getElementById("signU").addEventListener("click",openTab(e, "signup"));
-document.getElementById("log").addEventListener("click",openTab(e, "login"));
->>>>>>> fb0f5af1d2365ee6e2d26d0114a7b907a6790bc3
