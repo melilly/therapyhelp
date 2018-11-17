@@ -81,12 +81,6 @@
         <p><span style="color:#9c47e6;font-weight:bold">Hourly Rate:</span> $75</p>
         <p><span style="color:#9c47e6;font-weight:bold">Location:</span> <?php echo $location?></p><hr/>
         </div>
-        <div class="profile">
-        <h4 class="profileHeading"><span>Client</span></h4><hr/>
-		<button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">Edit Profile</a></button>
-        <p><span style="color:#9c47e6;font-weight:bold">Name:</span> Mary Jane</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Biography:</span> Sample bio</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Location:</span> Logan, Utah</p>
     </div>   
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -70,17 +70,6 @@
      <div class="header">
         <h1><span>Profile</span></h1><hr/>
     </div>
-    <div class="profile">
-        <h4 class="profileHeading"><span>Professional</span></h4><hr/>
-		<button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">Edit Profile</a></button>
-        <p><span style="color:#9c47e6;font-weight:bold">Name:</span><?php echo $name?> </p>
-        <p><span style="color:#9c47e6;font-weight:bold">Type of Practice:</span> Therapy</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Specialties: </span> Anxiety, depression, bipolar</p>
-        <p><span style="color:#9c47e6;font-weight:bold">School:</span> <?php echo $school?></p>
-        <p><span style="color:#9c47e6;font-weight:bold">Biography:</span> <?php echo $bio?></p>
-        <p><span style="color:#9c47e6;font-weight:bold">Hourly Rate:</span> $75</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Location:</span> <?php echo $location?></p><hr/>
-        </div>
         <div class="profile">
         <h4 class="profileHeading"><span>Client</span></h4><hr/>
 		<button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">Edit Profile</a></button>
