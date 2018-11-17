@@ -7,7 +7,7 @@
 	<title>Profile</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	 crossorigin="anonymous">
-	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="professionalstyle.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
   <?php
@@ -54,11 +54,8 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="profile/profileProfessional.php">Profesional Profile</a>
-          </li> 
          <li class="nav-item">
-            <a class="nav-link" href="profile/profileClient.php">Client Profile</a>
+            <a class="nav-link" href="profileClient.php">Client Profile</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../sessions/sessions.php">Your sessions</a>
@@ -75,7 +72,12 @@
     </div>
     <div class="profile">
         <h4 class="profileHeading"><span>Professional</span></h4><hr/>
-		<button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">Edit Profile</a></button>
+    <button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">Edit Profile</a></button>
+    <div class="profileinfo">
+    <div class="photo">
+       <img class="photo" src= "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"; >
+  
+    </div>
         <p><span style="color:#9c47e6;font-weight:bold">Name:</span><?php echo $name?> </p>
         <p><span style="color:#9c47e6;font-weight:bold">Type of Practice:</span> Therapy</p>
         <p><span style="color:#9c47e6;font-weight:bold">Specialties: </span> Anxiety, depression, bipolar</p>
@@ -83,7 +85,8 @@
         <p><span style="color:#9c47e6;font-weight:bold">Biography:</span> <?php echo $bio?></p>
         <p><span style="color:#9c47e6;font-weight:bold">Hourly Rate:</span> $75</p>
         <p><span style="color:#9c47e6;font-weight:bold">Location:</span> <?php echo $location?></p><hr/>
-        </div>
+     </div>
+      </div>
     </div>   
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

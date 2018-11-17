@@ -21,7 +21,10 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="profile/profile.php">Your Profile</a>
+            <a class="nav-link" href="profileProfessional.php">Professional Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profileClient.php">Client Profile</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../sessions/sessions.php">Your sessions</a>
