@@ -6,12 +6,12 @@ body,html{
 
 
 
-.searchBox{
-width: 20%;
-height: 15%;
-border: 1px black solid;
-align-items: center;
-float: left;
+#searchbox{
+  width: auto;
+  height: auto;
+  border: 1px black solid;
+  background-color: gainsboro;
+  float:left;
 }
 .searchBar{
   float: left;
