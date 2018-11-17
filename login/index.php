@@ -19,46 +19,50 @@
       </button>
     </div>
     <div id="main-content">
-      <div class="tab active" id="login">
-        <h1>Log In To Your Account</h1>
-        <div class="field">
-          <label>Email</label>
-          <input class="email" type="email"/>
+      <form action="insert.php" method="post">
+        <div class="tab active" id="login">
+          <h1>Log In To Your Account</h1>
+          <div class="field">
+            <label>Email</label>
+            <input class="email" type="email"/>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input class="pw" type="text"/>
+          </div>
+          <button class="submit" onclick="submitLoginData()">Submit</button>
         </div>
-        <div class="field">
-          <label>Password</label>
-          <input class="pw" type="text"/>
+      </form>
+      <form action="insert.php" method="post">
+        <div class="tab" id="signup">
+          <h1>Create Your Account</h1>
+          <div class="field">
+            <label>First Name</label>
+            <input class="fname" type="text"/>
+          </div>
+          <div class="field">
+            <label>Last Name</label>
+            <input class="lname" type="text"/>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input class="email" type="email"/>
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input class="pw" type="text"/>
+          </div>
+          <div class="field">
+            <label>Retype Password</label>
+            <input class="pw" type="text"/>
+          </div>
+          <div>
+            <input type="radio" name="account" class="account-type" value="professional">Professional<br>
+            <input type="radio" name="account" class="account-type" value="client">Client<br>
+          </div>
+          <button class="submit" onclick="submitSignupData()">Submit</button>
         </div>
-        <button class="submit" onclick="submitLoginData()">Submit</button>
-      </div>
-      <div class="tab" id="signup">
-        <h1>Create Your Account</h1>
-        <div class="field">
-          <label>First Name</label>
-          <input class="fname" type="text"/>
-        </div>
-        <div class="field">
-          <label>Last Name</label>
-          <input class="lname" type="text"/>
-        </div>
-        <div class="field">
-          <label>Email</label>
-          <input class="email" type="email"/>
-        </div>
-        <div class="field">
-          <label>Password</label>
-          <input class="pw" type="text"/>
-        </div>
-        <div class="field">
-          <label>Retype Password</label>
-          <input class="pw" type="text"/>
-        </div>
-        <div>
-          <input type="radio" name="account" class="account-type" value="professional">Professional<br>
-          <input type="radio" name="account" class="account-type" value="client">Client<br>
-        </div>
-        <button class="submit" onclick="submitSignupData()">Submit</button>
-      </div>
+      </form>
     </div>
   </div>
   <script src="script.js"></script>
