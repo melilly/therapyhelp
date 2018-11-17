@@ -20,12 +20,10 @@
         <div class="tab active" id="login">
           <h1>Log In To Your Account</h1>
           <div class="field">
-            <label>Email</label>
-            <input class="email" type="email"/>
+            <input class="email" type="email" placeholder="Email" onkeyup="this.setAttribute('value', this.value);"/>
           </div>
           <div class="field">
-            <label>Password</label>
-            <input class="pw" type="text"/>
+            <input class="pw" type="text" placeholder="Password" onkeyup="this.setAttribute('value', this.value);"/>
           </div>
           <button class="submit" onclick="submitLoginData()">Submit</button>
         </div>
@@ -34,26 +32,21 @@
         <div class="tab" id="signup">
           <h1>Create Your Account</h1>
           <div class="field">
-            <label>First Name</label>
-            <input class="fname" type="text"/>
+            <input class="fname" type="text" placeholder="First Name" onkeyup="this.setAttribute('value', this.value);"/>
           </div>
           <div class="field">
-            <label>Last Name</label>
-            <input class="lname" type="text"/>
+            <input class="lname" type="text" placeholder="Last Name" onkeyup="this.setAttribute('value', this.value);"/>
           </div>
           <div class="field">
-            <label>Email</label>
-            <input class="email" type="email"/>
+            <input class="email" type="email" placeholder="Email" onkeyup="this.setAttribute('value', this.value);"/>
           </div>
           <div class="field">
-            <label>Password</label>
-            <input class="pw" type="text"/>
+            <input class="pw" type="text" placeholder="Password" onkeyup="this.setAttribute('value', this.value);"/>
           </div>
           <div class="field">
-            <label>Retype Password</label>
-            <input class="pw" type="text"/>
+            <input class="pw" type="text" placeholder="Retype Password" onkeyup="this.setAttribute('value', this.value);"/>
           </div>
-          <div>
+          <div class="radio-section">
             <input type="radio" name="account" class="account-type" value="professional">Professional<br>
             <input type="radio" name="account" class="account-type" value="client">Client<br>
           </div>
