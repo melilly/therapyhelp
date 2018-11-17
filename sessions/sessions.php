@@ -7,6 +7,38 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
+     <?php
+        $professional_id = $name = $next_session ="";
+        $mysqli = new mysqli("localhost", "root", "", "therapysite");
+        $query = "SELECT s.professional_id, s.next_session
+                 FROM session s
+                 WHERE s.client_id =1";
+        if ($result=mysqli_query($mysqli,$query))
+          {
+        // Fetch one and one row
+            while ($row=mysqli_fetch_row($result))
+            {
+              $professional_id = $row[0];
+              $next_session = $row[1];
+            }
+        // Free result set
+        mysqli_free_result($result);
+        }
+        $name_query = "SELECT u.fName, u.lName
+                      FROM user u
+                      Join professional p on p.user_id = u.id
+                      where p.professional_id = $professional_id";
+        if ($result=mysqli_query($mysqli,$name_query))
+          {
+        // Fetch one and one row
+            while ($row=mysqli_fetch_row($result))
+            {
+              $name = $row[0]." ".$row[1];
+            }
+        // Free result set
+        mysqli_free_result($result);
+        }
+        ?>         
      <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -38,21 +70,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <h3>Your Professional:
-                <?php
-        $mysqli = new mysqli("localhost", "root", "", "therapysite");
-        $query = "SELECT * FROM user";
-        $result = $mysqli->query($query);
-        if ($result->num_rows > 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-                echo  $row["fName"];
-            }
-        } else {
-            echo "0 results";
-        }
-        ?>         
-         </h3>
+          <h3>Your Professional:<?php echo $name?> </h3>
           <div class="card" style="width: 18rem;">
             <img class="card-img-top" src=".../100px180/" alt="Card image cap">
             <div class="card-body">
@@ -62,8 +80,8 @@
           </div>
         </div>
         <div class="col">
-          <h3>Your Next Appointment</h3>
-          <button type="button" class="btn btn-primary">Primary</button>
+          <h3>Your Next Appointment: <?php echo $next_session?></h3>
+          <button type="button" class="btn btn-primary">Schedule an Appointment</button>
         </div>
       </div>
     </div>
