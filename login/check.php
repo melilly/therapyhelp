@@ -10,17 +10,23 @@ if($link === false){
  
 $email = mysqli_real_escape_string($link, $_REQUEST['email']);
 $password = mysqli_real_escape_string($link, $_REQUEST['Password']);
-// Attempt insert query execution
-echo $email;
-echo $password;
- $sql = "SELECT * FROM user
+if($email !="" && $password !=""){
+	echo $email;
+	echo $password;
+ 	$sql = "SELECT fName FROM user
  		WHERE email='$email' and password='$password'";
 
- if (mysqli_query($link,$sql)){
+ 	if ($result=mysqli_query($link,$sql)){
       echo "<script>window.location = '../index.php'</script>";
-  }
-  else{
+  	}
+  	else{
   	echo("Error description: " . mysqli_error($link));
+  	echo " invalid entry";
   }
+}
+else{
+	echo "<script>window.location = 'index.php'</script>";
+}
+// Attempt insert query executio
   mysqli_close($link);
 ?>
