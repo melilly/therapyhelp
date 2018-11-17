@@ -22,7 +22,7 @@
             <a class="nav-link" href="profile/profile.html">Your Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sessions/sessions.html">Your sessions</a>
+            <a class="nav-link" href="sessions/sessions.php">Your sessions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Connect with a Professional</a>
