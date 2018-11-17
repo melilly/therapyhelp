@@ -13,9 +13,15 @@ $name = mysqli_real_escape_string($link, $_REQUEST['Name']);
 $location = mysqli_real_escape_string($link, $_REQUEST['Location']);
 $minRate = mysqli_real_escape_string($link, $_REQUEST['minRate']);
 $maxRate = mysqli_real_escape_string($link, $_REQUEST['maxRate']);
-
-if($name != ""){
-	$nameSql= " u.fName LIKE '%{$name}%' OR u.lName LIKE '%{$name}%' ";
+if($minRate =="")
+{
+	$minRate = 0;
+}
+if($maxRate == ""){
+	$maxRate = 5000;
+}
+if($name == ""){
+	$nameSql= " u.fName LIKE '%{$name}%' OR u.lName LIKE '%{$name}%' AND p.rate > $minRate AND p.rate < $maxRate";
 }
 $where= $nameSql;
 if($where !=""){

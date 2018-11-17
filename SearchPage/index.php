@@ -42,7 +42,8 @@
         </ul>
       </div>
     </nav>
-    <div class="container"  id="searchbox">
+    <div id="searchbox">
+    <div class="container">
         <h1>Find a Professional</h1>
         <form action="index.php" method="POST">
           <div class="search">
@@ -94,6 +95,7 @@
       </div>
     </form>
 	</div>
+</div>
   <div id="results">
     <?php 
      if(isset($_REQUEST['Name'])){
@@ -114,7 +116,7 @@
       if($row[6]!=0){
         $specialties=$specialties."Trama ";
       }
-      echo"<div class='container'>
+      echo"<div class='container' style='float:right; width:75%;'>
       <h4>$row[0].$row[1]</h4>
       <div class='row'>
         <div class='col'>

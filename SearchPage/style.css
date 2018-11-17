@@ -1,14 +1,14 @@
 body,html{
   width: 100%;
-  height: 100%;
+  height: auto;
 
 }
 
 
 
 #searchbox{
-  width: auto;
-  height: auto;
+  width: 25%;
+  height: 100%;
   border: 1px black solid;
   background-color: rgb(224, 221, 221);
   float:left;
