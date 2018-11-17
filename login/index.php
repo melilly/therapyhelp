@@ -54,8 +54,8 @@
           <input class="pw" type="text"/>
         </div>
         <div>
-          <input type="radio" name="Account Type">Professional<br>
-          <input type="radio" name="Account Type">Client<br>
+          <input type="radio" name="account" class="account-type" value="professional">Professional<br>
+          <input type="radio" name="account" class="account-type" value="client">Client<br>
         </div>
         <button class="submit" onclick="submitSignupData()">Submit</button>
       </div>

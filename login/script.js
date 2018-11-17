@@ -15,12 +15,18 @@ function submitLoginData(){
   alert("log on submitted! email: " + email + " and pw: " + pw);
 }
 function submitSignupData(){
-  var fields, first, last, email, pw, verifypw;
+  var fields, first, last, email, pw, verifypw, account;
   fields = document.getElementById("signup");
   first = fields.getElementsByClassName("fname")[0].value;
   last = fields.getElementsByClassName("lname")[0].value;
   email = fields.getElementsByClassName("email")[0].value;
   pw = fields.getElementsByClassName("pw")[0].value;
   verifypw = fields.getElementsByClassName("pw")[1].value;
-  alert("signup submitted! last: " + last + " and pw 1&2: " + pw + " " + verifypw);
+  if(fields.getElementsByClassName("account-type")[0].checked){
+    account = fields.getElementsByClassName("account-type")[0].value;
+  }
+  if(fields.getElementsByClassName("account-type")[1].checked){
+    account = fields.getElementsByClassName("account-type")[1].value;
+  }
+  alert("signup submitted! last: " + last + " and account type: " + account);
 }
