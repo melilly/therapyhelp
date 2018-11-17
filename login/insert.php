@@ -4,8 +4,8 @@ server with default setting (user 'root' with no password) */
 $link = mysqli_connect("localhost", "root", "", "therapysite");
  
 // Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
+if($link->connect_error){
+    die("ERROR: Could not connect. " . $link->connect_error);
 }
  
 // Escape user inputs for security
@@ -14,14 +14,14 @@ $last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
 $email = mysqli_real_escape_string($link, $_REQUEST['email']);
 $password = mysqli_real_escape_string($link, $_REQUEST['pw']);
 // Attempt insert query execution
- $sql = "INSERT INTO `user`( `fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)
-        VALUES ()"
-if(mysqli_query($link, $sql)){
+//$sql = "INSERT INTO `user`( `fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)
+        //VALUES ()"
+if($link->query($sql)){
     echo "Records added successfully.";
 } else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
+    echo "ERROR: Could not to execute $sql. " . $link->error;
 }
  
 // Close connection
-mysqli_close($link);
+$link->close();
 ?>

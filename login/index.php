@@ -10,16 +10,14 @@
 
 <body>
 	<div class="parent">
-		<div id="top-content">
-      <button onclick="openTab(event, 'login')">
-        Log In
-      </button>
-      <button onclick="openTab(event, 'signup')">
-        Sign Up
-      </button>
-    </div>
     <div id="main-content">
-      <form action="insert.php" method="post">
+        <button class="top" onclick="openTab(event, 'login')">
+          Log In
+        </button>
+        <button class="top" onclick="openTab(event, 'signup')">
+          Sign Up
+        </button>
+      <!--form action="insert.php" method="post"-->
         <div class="tab active" id="login">
           <h1>Log In To Your Account</h1>
           <div class="field">
@@ -32,8 +30,8 @@
           </div>
           <button class="submit" onclick="submitLoginData()">Submit</button>
         </div>
-      </form>
-      <form action="insert.php" method="post">
+      <!--/form-->
+      <!--form action="insert.php" method="post"-->
         <div class="tab" id="signup">
           <h1>Create Your Account</h1>
           <div class="field">
@@ -62,7 +60,7 @@
           </div>
           <button class="submit" onclick="submitSignupData()">Submit</button>
         </div>
-      </form>
+      <!--/form-->
     </div>
   </div>
   <script src="script.js"></script>

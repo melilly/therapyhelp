@@ -1,27 +1,25 @@
 .parent{
   margin: 40px;
-  background: #ffffcc;
   padding: 8px;
+  box-shadow: 0px 6px 12px;
+  background: #dbfbff;
+  border: #011361;
+  border-width: 10px;
+}
+.parent .tab{
+  display: none;
+}
+.parent .active{
+  display: block;
 }
 
-#top-content button{
+.top{
   width: 50%;
   float: left;
 }
 
-#main-content{
-  padding: 20px 0px;
-}
-
-#main-content .tab{
-  background: #ff9999;
-  display: none;
-}
-#main-content .active{
-  display: block;
-}
-
 h1{
+  padding-top: 40px;
   text-align: center;
 }
 
@@ -38,5 +36,11 @@ input{
 }
 
 button.submit{
-  width: 40%;
-  margin: 5000px, 30%;
+  margin-top: 20px;
+  width: 100%;
+}
+
+button{
+  padding: 10px 0px;
+  background: #ffffff00;
+}
