@@ -1,14 +1,11 @@
 function openTab(e, tabID){
   //TODO error: element never reappears
-  var i, tabs, tabcontents;
-  tabs = document.getElementsByClassName("tab");
-  tabcontents = document.getElementsByClassName("tab-content");
+  var i, tabcontents;
+  tabcontents = document.getElementsByClassName("tab");
   for(i = 0; i < tabcontents.length; i++){
-    tabcontents[i].style.display = "none";
-    //tabs[i].className = tabs[i].className.replace(" active", "")
+    tabcontents[i].className = tabcontents[i].className.replace(" active", "");
   }
-  document.getElementById("signup").style.display = "block";
-  //e.currentTarget.className += " active"
+  document.getElementById(tabID).className += " active";
 }
 
 function submitData(){

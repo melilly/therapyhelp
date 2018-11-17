@@ -1,27 +1,25 @@
-@import "compass/css3";
-
-.box{
-  margin: 40px 40px auto;
+.parent{
+  margin: 40px;
   background: #ffffcc;
   padding: 8px;
 }
 
-#main-content{
-  padding:20px, 0px;
-}
-
-button.tab{
+#top-content button{
   width: 50%;
   float: left;
   padding: 10px 0px;
 }
 
-.tab-content{
-  background: #ff9999;
+#main-content{
+  padding: 20px 0px;
 }
 
-#signup{
+#main-content .tab{
+  background: #ff9999;
   display: none;
+}
+#main-content .active{
+  display: block;
 }
 
 h1{
