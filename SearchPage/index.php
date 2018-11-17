@@ -5,8 +5,6 @@
   $user_id =$_SESSION['id'];
   if(isset($_REQUEST['Name'])){
     $inresult = getProf();
-  }if(isset($_REQUEST['professional'])){
-    sentRequest($user_id);
   }
 ?>
 <!DOCTYPE html>
@@ -124,11 +122,7 @@
         <div class='col'>
           <p>Location:$row[2]</p>
           <p>Rate: $row[3]</p>
-          <p>Specialties: $specialties</p>
-          <form action='index.php' method='POST'>
-          <input type='hidden' name='pro' value=$row[4] />
-          <input type='submit' name='professional' value='Request Pairing'>
-          </form>
+          <p>Specialties: .$specialties</p>
         </div>
         <div class='col-7'>
           <h5>Bio: $row[11]</h5>
