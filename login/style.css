@@ -31,7 +31,8 @@ body{
 }
 
 h1{
-  padding-top: 40px;
+  padding-top: 80px;
+  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -42,7 +43,7 @@ h1{
 
 input:not([type='radio']){
   width: 90%;
-  height: 20px;
+  height: 30px;
   margin: 2% 5%;
   cursor: text;
   padding-left: 5px;
