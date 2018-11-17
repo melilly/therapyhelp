@@ -29,6 +29,7 @@
           <label>Password</label>
           <input class="pw" type="text"/>
         </div>
+        <button class="submit" onclick="submitLoginData()">Submit</button>
       </div>
       <div class="tab" id="signup">
         <h1>Create Your Account</h1>
@@ -58,8 +59,8 @@
             <li>Client</li>
           </ul>
         </div>
+        <button class="submit" onclick="submitSignupData()">Submit</button>
       </div>
-      <button class="submit" onclick="submitData()">Submit</button>
     </div>
   </div>
   <script src="script.js"></script>

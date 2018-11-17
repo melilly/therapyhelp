@@ -7,14 +7,6 @@ function openTab(e, tabID){
   document.getElementById(tabID).className += " active";
 }
 
-function submitData(){
-  if(document.getElementById("login").className.includes("active")){
-    submitLoginData();
-  }
-  if(document.getElementById("signup").className.includes("active")){
-    submitSignupData();
-  }
-}
 function submitLoginData(){
   var fields, email, pw;
   fields = document.getElementById("login");
