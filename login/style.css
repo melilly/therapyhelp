@@ -47,10 +47,12 @@ input:not([type='radio']){
   cursor: text;
   padding-left: 5px;
   font-size: 16px;
+  box-shadow: 0px 1px 3px;
 }
 
 .radio-section{
-  margin: 5px 0px 5px 7%;
+  margin: 10px 0px 10px 7%;
+  line-height: 170%;
 }
 
 button.submit{
