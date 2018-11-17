@@ -22,9 +22,15 @@ body{
 .top{
   width: 50%;
   float: left;
-  border-style: none none double none;
-  border-width: 5px;
+  border-style: hidden hidden double hidden;
+  border-width: 1px 1px 5px 1px;
   background: #00000000;
+}
+
+.top.active{
+  border-style: solid solid double solid;
+  border-radius: 4px;
+  background: #3a9ec594;
 }
 
 h1{

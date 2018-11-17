@@ -4,7 +4,12 @@ function openTab(e, tabID){
   for(i = 0; i < tabcontents.length; i++){
     tabcontents[i].className = tabcontents[i].className.replace(" active", "");
   }
+  headers = document.getElementsByClassName("top");
+  for(i = 0; i < headers.length; i++){
+    headers[i].className = headers[i].className.replace(" active", "");
+  }
   document.getElementById(tabID).className += " active";
+  document.getElementById("" + tabID + "-header").className += " active";
 }
 
 function submitLoginData(){

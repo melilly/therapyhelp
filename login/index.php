@@ -10,10 +10,10 @@
 
 <body>
 	<div class="parent">
-        <button class="top" onclick="openTab(event, 'login')">
+        <button class="top active" id="login-header" onclick="openTab(event, 'login')">
           Log In
         </button>
-        <button class="top" onclick="openTab(event, 'signup')">
+        <button class="top" id="signup-header" onclick="openTab(event, 'signup')">
           Sign Up
         </button>
       <!--form action="insert.php" method="post"-->
