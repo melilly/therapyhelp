@@ -22,35 +22,35 @@
       <div class="tab active" id="login">
         <h1>Log In To Your Account</h1>
         <div class="field">
-          <label id="email">Email</label>
-          <input type="email"/>
+          <label>Email</label>
+          <input class="email" type="email"/>
         </div>
         <div class="field">
-          <label id="pw">Password</label>
-          <input type="text"/>
+          <label>Password</label>
+          <input class="pw" type="text"/>
         </div>
       </div>
       <div class="tab" id="signup">
         <h1>Create Your Account</h1>
         <div class="field">
-          <label id="fname">First Name</label>
-          <input type="text"/>
+          <label>First Name</label>
+          <input class="fname" type="text"/>
         </div>
         <div class="field">
-          <label id="lname">Last Name</label>
-          <input type="text"/>
+          <label>Last Name</label>
+          <input class="lname" type="text"/>
         </div>
         <div class="field">
-          <label id="email">Email</label>
-          <input type="email"/>
+          <label>Email</label>
+          <input class="email" type="email"/>
         </div>
         <div class="field">
-          <label id="pw">Password</label>
-          <input type="text"/>
+          <label>Password</label>
+          <input class="pw" type="text"/>
         </div>
         <div class="field">
-          <label id="pw-again">Retype Password</label>
-          <input type="text"/>
+          <label>Retype Password</label>
+          <input class="pw" type="text"/>
         </div>
         <div>
           <ul>
