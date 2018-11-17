@@ -9,27 +9,27 @@ function openTab(e, tabID){
 }
 
 function submitData(){
-  /*if(document.getElementById("login").style.display == "block"){
+  if(document.getElementById("login").className.includes("active")){
     submitLoginData();
   }
-  if(document.getElementById("signup").style.display == "block"){
+  if(document.getElementById("signup").className.includes("active")){
     submitSignupData();
-  }*/
+  }
 }
-/*
 function submitLoginData(){
-  var email, pw;
-  fields = document.getElementsByClassName("login-field");
-  email = fields.getElementById("email");
-  pw = fields.getElementById("pw");
-  print()
+  var fields, email, pw;
+  fields = document.getElementById("login");
+  email = fields.getElementsByClassName("email")[0].value;
+  pw = fields.getElementsByClassName("pw")[0].value;
+  alert("log on submitted! email: " + email + " and pw: " + pw);
 }
 function submitSignupData(){
-  var first, last, email, pw, verify-pw;
-  fields = document.getElementsByClassName("signup-field")
-  first = fields.getElementById("fname");
-  last = fields.getElementById("lname");
-  email = fields.getElementById("email");
-  pw = fields.getElementById("pw");
-  verify-pw = fields.getElementById("pw-again");
-}*/
+  var fields, first, last, email, pw, verifypw;
+  fields = document.getElementById("signup");
+  first = fields.getElementsByClassName("fname")[0].value;
+  last = fields.getElementsByClassName("lname")[0].value;
+  email = fields.getElementsByClassName("email")[0].value;
+  pw = fields.getElementsByClassName("pw")[0].value;
+  verifypw = fields.getElementsByClassName("pw")[1].value;
+  alert("signup submitted! last: " + last + " and pw 1&2: " + pw + " " + verifypw);
+}
