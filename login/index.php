@@ -28,7 +28,7 @@
           </div>
           <div class="field">
             <label>Password</label>
-            <input class="pw" type="text" name="pw"/>
+            <input class="pw" type="text" name="password"/>
           </div>
           <button class="submit" onclick="submitLoginData()">Submit</button>
         </div>
@@ -38,23 +38,23 @@
           <h1>Create Your Account</h1>
           <div class="field">
             <label>First Name</label>
-            <input class="fname" type="text"/>
+            <input class="fname" type="text" name="first_name"/>
           </div>
           <div class="field">
             <label>Last Name</label>
-            <input class="lname" type="text"/>
+            <input class="lname" type="text" name="last_name"/>
           </div>
           <div class="field">
             <label>Email</label>
-            <input class="email" type="email"/>
+            <input class="email" type="email" name="email"/>
           </div>
           <div class="field">
             <label>Password</label>
-            <input class="pw" type="text"/>
+            <input class="pw" type="text" name="password"/>
           </div>
           <div class="field">
             <label>Retype Password</label>
-            <input class="pw" type="text"/>
+            <input class="pw" type="text" name="password_again"/>
           </div>
           <div>
             <input type="radio" name="account" class="account-type" value="professional">Professional<br>
