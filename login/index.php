@@ -36,7 +36,7 @@
       </div>
       </div>
       <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-        <form>
+        <form action="insert.php" method="POST">
           <div class="field">
           <label>First Name</label>
           <input class="fname" type="text"name="first_name"/>

@@ -1,31 +1,32 @@
 <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "root", "", "therapysite");
- 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "therapysite";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
  
 // Escape user inputs for security
-$first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
-$last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
-$email = mysqli_real_escape_string($link, $_REQUEST['email']);
-$password = mysqli_real_escape_string($link, $_REQUEST['pw']);
-$isClient = mysqli_real_escape_string($link, $_REQUEST['radio']);
+$first_name = mysqli_real_escape_string($conn, $_REQUEST['first_name']);
+$last_name = mysqli_real_escape_string($conn, $_REQUEST['last_name']);
+$email = mysqli_real_escape_string($conn, $_REQUEST['email']);
+$password = mysqli_real_escape_string($conn, $_REQUEST['pw']);
+$isClient = mysqli_real_escape_string($conn, $_REQUEST['type']);
 // Attempt insert query execution
- $sql = "INSERT INTO `user`( `fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)
-        VALUES ($fName, $lName, $email, $pw, $radio)";
+ $sql = "INSERT INTO `user`( `fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)VALUES ('$first_name', '$last_name', '$email',' $password', 1, $isClient)";
 
-if(mysqli_query($link, $sql)){
-    echo "Records added successfully.";
-    echo "<h3>Sucess</h3>";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-    echo "<h3>Fail</h3>";
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
- 
-// Close connection
-mysqli_close($link);
+
+$conn->close();
 ?>
