@@ -28,21 +28,20 @@
       die("Connection failed: " . $conn->connect_error);
   } 
 
-  $sql = "SELECT p.user_id, p.location, p.school, p.bio, u.fName, u.lName 
-          FROM professional p
-          JOIN user u ON p.user_id=u.id
-          WHERE p.user_id =$user_id
-          ";
+  $sql = "SELECT fName, lName 
+          FROM user
+          WHERE id =$user_id";
+      
     if ($result=mysqli_query($conn,$sql))
     {
   // Fetch one and one row
       while ($row=mysqli_fetch_row($result))
       {
-        $location = $row[1];
-        $school = $row[2];
-        $bio = $row[3];
-        $name = $row[4]. " ". $row[5];
+
+        $name = $row[0]. " ". $row[1];
+
       }
+
   // Free result set
   mysqli_free_result($result);
   }
