@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
@@ -18,10 +18,10 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Your Profile</a>
+            <a class="nav-link" href="profile/profile.html">Your Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Your Sessions</a>
+            <a class="nav-link" href="sessions/sessions.php">Your sessions</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Connect with a Professional</a>
