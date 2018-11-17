@@ -16,7 +16,7 @@
         <button class="top" id="signup-header" onclick="openTab(event, 'signup')">
           Sign Up
         </button>
-      <form action="insert.php" method="post">
+      <form action="check.php" method="post">
         <div class="tab active" id="login">
           <h1>Log In To Your Account</h1>
           <div class="field">
@@ -47,8 +47,8 @@
             <input class="pw" name="pw_again" type="text" placeholder="Retype Password" onkeyup="this.setAttribute('value', this.value);"/>
           </div>
           <div class="radio-section">
-            <input type="radio" name="type" class="account-type" value="professional">Professional<br>
-            <input type="radio" name="type" class="account-type" value="client">Client<br>
+            <input type="radio" name="type" class="account-type" value=0>Professional<br>
+            <input type="radio" name="type" class="account-type" value=1>Client<br>
           </div>
           <button class="submit" onclick="submitSignupData()">Submit</button>
         </div>

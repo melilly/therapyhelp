@@ -20,7 +20,7 @@ $email = mysqli_real_escape_string($conn, $_REQUEST['email']);
 $password = mysqli_real_escape_string($conn, $_REQUEST['pw']);
 $isClient = mysqli_real_escape_string($conn, $_REQUEST['type']);
 // Attempt insert query execution
- $sql = "INSERT INTO `user`( `fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)VALUES ('$first_name', '$last_name', '$email',' $password', 1, $isClient)";
+ $sql = "INSERT INTO `user`( `fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)VALUES ('$first_name', '$last_name', '$email',' $password', 1, 1)";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";

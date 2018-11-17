@@ -10,7 +10,7 @@ server with default setting (user 'root' with no password) */
   }
    
   $email = mysqli_real_escape_string($link, $_REQUEST['email']);
-  $password = mysqli_real_escape_string($link, $_REQUEST['Password']);
+  $password = mysqli_real_escape_string($link, $_REQUEST['pw']);
   if($email !="" && $password !=""){
   	echo $email;
   	echo $password;

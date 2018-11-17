@@ -17,7 +17,7 @@ function submitLoginData(){
   fields = document.getElementById("login");
   email = fields.getElementsByClassName("email")[0].value;
   pw = fields.getElementsByClassName("pw")[0].value;
-  alert("log on submitted! email: " + email + " and pw: " + pw);
+  alert("The following log on information was submitted:\nEmail: " + email + "\nPassword: " + pw);
 }
 function submitSignupData(){
   var fields, first, last, email, pw, verifypw, account;
@@ -28,10 +28,10 @@ function submitSignupData(){
   pw = fields.getElementsByClassName("pw")[0].value;
   verifypw = fields.getElementsByClassName("pw")[1].value;
   if(fields.getElementsByClassName("account-type")[0].checked){
-    account = fields.getElementsByClassName("account-type")[0].value;
+    account = "Professional";
   }
   if(fields.getElementsByClassName("account-type")[1].checked){
-    account = fields.getElementsByClassName("account-type")[1].value;
+    account = "Client";
   }
-  alert("signup submitted! last: " + last + " and account type: " + account);
+  alert("The following sign up information was submitted:\nName: " + first + " " + last + "\nEmail: " + email + "\nPassword: " + pw + "\nRetyped Password: " + verifypw + "\nAccount Type: " + account);
 }
