@@ -26,6 +26,12 @@
           <li class="nav-item">
             <a class="nav-link" href="../sessions/sessions.php">Your sessions</a>
           </li>
+<<<<<<< HEAD
+=======
+          <li class="nav-item">
+            <a class="nav-link" href="../SearchPage/index.php">Connect with a Professional</a>
+          </li>
+>>>>>>> parent of 787d1f2... update
         </ul>
       </div>
     </nav>
@@ -35,7 +41,7 @@
     </div>
     <div class="profile">
         <h4 class="profileHeading"><span>Professional</span></h4><hr/>
-		<button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">Edit Profile</a></button>
+		<button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">edit profile</button>
         <p><span style="color:#9c47e6;font-weight:bold">Name:</span> Dr. John Smith</p>
         <p><span style="color:#9c47e6;font-weight:bold">Type of Practice:</span> Therapy</p>
         <p><span style="color:#9c47e6;font-weight:bold">Specialties: </span> Anxiety, depression, bipolar</p>
@@ -46,7 +52,7 @@
         </div>
         <div class="profile">
         <h4 class="profileHeading"><span>Client</span></h4><hr/>
-		<button type="button" class="btn btn-outline-dark"><a href="profile-edit.php">Edit Profile</a></button>
+		<button type="button" class="btn btn-outline-dark">Dark</button>
         <p><span style="color:#9c47e6;font-weight:bold">Name:</span> Mary Jane</p>
         <p><span style="color:#9c47e6;font-weight:bold">Biography:</span> Sample bio</p>
         <p><span style="color:#9c47e6;font-weight:bold">Location:</span> Logan, Utah</p>
