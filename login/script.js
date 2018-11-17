@@ -5,12 +5,7 @@ function openTab(e, tabID){
   for(i = 0; i < tabcontents.length; i++){
     tabcontents[i].className = tabcontents[i].className.replace(" active", "");
   }
-  if(tabID === 'login'){
-    document.getElementById("login").className += " active";
-  }
-  if(tabID === 'signup'){
-    document.getElementById("signup").className += " active";
-  }
+  document.getElementById(tabID).className += " active";
 }
 
 function submitData(){
