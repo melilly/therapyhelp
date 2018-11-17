@@ -9,15 +9,9 @@ $dbname = "therapysite";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
-<<<<<<< HEAD
 if($link->connect_error){
     die("ERROR: Could not connect. " . $link->connect_error);
 }
-=======
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
->>>>>>> master
  
 // Escape user inputs for security
 $first_name = mysqli_real_escape_string($conn, $_REQUEST['first_name']);
@@ -26,7 +20,6 @@ $email = mysqli_real_escape_string($conn, $_REQUEST['email']);
 $password = mysqli_real_escape_string($conn, $_REQUEST['pw']);
 $isClient = mysqli_real_escape_string($conn, $_REQUEST['type']);
 // Attempt insert query execution
-<<<<<<< HEAD
 //$sql = "INSERT INTO `user`( `fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)
         //VALUES ()"
 if($link->query($sql)){
@@ -37,15 +30,4 @@ if($link->query($sql)){
  
 // Close connection
 $link->close();
-=======
- $sql = "INSERT INTO `user`( `fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)VALUES ('$first_name', '$last_name', '$email',' $password', 1, $isClient)";
-
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
->>>>>>> master
 ?>
