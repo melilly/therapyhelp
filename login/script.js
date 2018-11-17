@@ -1,5 +1,4 @@
 function openTab(e, tabID){
-  //TODO error: element never reappears
   var i, tabcontents;
   tabcontents = document.getElementsByClassName("tab");
   for(i = 0; i < tabcontents.length; i++){
