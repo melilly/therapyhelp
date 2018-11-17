@@ -26,12 +26,9 @@
           <li class="nav-item">
             <a class="nav-link" href="../sessions/sessions.php">Your sessions</a>
           </li>
-<<<<<<< HEAD
-=======
           <li class="nav-item">
             <a class="nav-link" href="../SearchPage/index.php">Connect with a Professional</a>
           </li>
->>>>>>> parent of 787d1f2... update
         </ul>
       </div>
     </nav>
