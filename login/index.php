@@ -19,21 +19,21 @@
       </button>
     </div>
     <div id="main-content">
-      <form action="insert.php" method="post">
+      <form action="login_connect.php" method="post">
         <div class="tab active" id="login">
           <h1>Log In To Your Account</h1>
           <div class="field">
             <label>Email</label>
-            <input class="email" type="email"/>
+            <input class="email" type="email" name="email"/>
           </div>
           <div class="field">
             <label>Password</label>
-            <input class="pw" type="text"/>
+            <input class="pw" type="text" name="pw"/>
           </div>
           <button class="submit" onclick="submitLoginData()">Submit</button>
         </div>
       </form>
-      <form action="insert.php" method="post">
+      <form action="signup_connect.php" method="post">
         <div class="tab" id="signup">
           <h1>Create Your Account</h1>
           <div class="field">
