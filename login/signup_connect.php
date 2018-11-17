@@ -12,16 +12,16 @@ if($link === false){
 $first_name = mysqli_real_escape_string($link, $_REQUEST['first_name']);
 $last_name = mysqli_real_escape_string($link, $_REQUEST['last_name']);
 $email = mysqli_real_escape_string($link, $_REQUEST['email']);
-$password = mysqli_real_escape_string($link, $_REQUEST['password']);
+$password = mysqli_real_escape_string($link, $_REQUEST['pw']);
 // Attempt insert query execution
  $sql = "INSERT INTO `user`( `fName`, `lName`, `email`, `password`, `isVerified`, `isClient`)
-        VALUES ('', '', '', '', false, false)"
+        VALUES ()"
 if(mysqli_query($link, $sql)){
     echo "Records added successfully.";
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
-
+ 
 // Close connection
 mysqli_close($link);
 ?>
