@@ -21,8 +21,8 @@ if($email !="" && $password !=""){
       $Client= $id="";
       while ($row=mysqli_fetch_row($result))
       {
-          $Client = $row[0];   
-          $id = $row[1];
+          $Client = $row[isClient];   
+          $id = $row[id];
       }
 
       $_SESSION['user_Type'] = $Client;

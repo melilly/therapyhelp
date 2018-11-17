@@ -20,8 +20,6 @@
   $username = "root";
   $password = "";
   $dbname = "therapysite";
-  $type =$_SESSION['user_Type'];
-  $user_id =$_SESSION['id']
   // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
   // Check connection

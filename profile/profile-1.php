@@ -83,9 +83,8 @@
        <img class="photo" src= "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"; >
   
     </div>
-        <p><span style="color:#9c47e6;font-weight:bold">Name:</span> Mary Jane</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Biography:</span> Sample bio</p>
-        <p><span style="color:#9c47e6;font-weight:bold">Location:</span> Logan, Utah</p>
+        <p><span style="color:#9c47e6;font-weight:bold">Name:</span> $name</p>
+
      </div>
       </div>
     </div>   
