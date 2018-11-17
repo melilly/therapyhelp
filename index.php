@@ -1,3 +1,8 @@
+<?php
+      session_start();
+      $type =$_SESSION['user_Type'];
+      $user_id =$_SESSION['id']
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,16 +24,13 @@
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="profile/profileProfessional.php">Profesional Profile</a>
+            <a class="nav-link" href="profile/profile-<?php echo $type?>.php">Profile</a>
           </li> 
-         <li class="nav-item">
-            <a class="nav-link" href="profile/profileClient.php">Client Profile</a>
+          <li class="nav-item">
+            <a class="nav-link" href="/sessions/sessions.php">Your sessions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sessions/sessions.php">Your sessions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="SearchPage/index.php">Connect with a Professional</a>
+            <a class="nav-link" href="/SearchPage/index.php">Connect with a Professional</a>
           </li>
         </ul>
       </div>

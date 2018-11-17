@@ -1,3 +1,8 @@
+<?php
+      session_start();
+      $type =$_SESSION['user_Type'];
+      $user_id =$_SESSION['id']
+?>
 <!DOCTYPE html>
 <html>
 
@@ -49,19 +54,19 @@
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">Therapist</a>
+        <a class="navbar-brand" href="../index.php">FEEL GOOD INC</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="profileProfessional.php">Profesional Profile</a>
+            <a class="nav-link" href="#">Profile</a>
           </li> 
           <li class="nav-item">
             <a class="nav-link" href="../sessions/sessions.php">Your sessions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../SearchPage/index.php">Connect with a Professional</a>
+            <a class="nav-link" href="#">Connect with a Professional</a>
           </li>
         </ul>
       </div>

@@ -1,3 +1,8 @@
+<?php
+      session_start();
+      $type =$_SESSION['user_Type'];
+      $user_id =$_SESSION['id'];
+ ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,12 +18,15 @@
         $mysqli = new mysqli("localhost", "root", "", "therapysite");
         $query = "SELECT s.professional_id, s.next_session, s.next_time
                  FROM session s
-                 WHERE s.client_id =1";
+                 Join client c on c.client_id = s.client_id
+                  Join user u on u.id = c.user_id
+                 WHERE u.id =$user_id";
         if ($result=mysqli_query($mysqli,$query))
           {
         // Fetch one and one row
             while ($row=mysqli_fetch_row($result))
             {
+  
               $professional_id = $row[0];
               $next_session = $row[1];
               $next_time = $row[2];
@@ -42,19 +50,19 @@
         mysqli_free_result($result);
         }
         ?>         
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">Hidden brand</a>
+        <a class="navbar-brand" href="../index.php">FEEL GOOD INC</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../profile/profile.html">Your Profile</a>
-          </li>
+            <a class="nav-link" href="../profile/profile-<?php echo $type?>.php">Profile</a>
+          </li> 
           <li class="nav-item">
             <a class="nav-link" href="#">Your sessions</a>
           </li>

@@ -1,7 +1,12 @@
 <?php
   require_once('search.php');
+  session_start();
+  $type =$_SESSION['user_Type'];
+  $user_id =$_SESSION['id'];
   if(isset($_REQUEST['Name'])){
     $inresult = getProf();
+  }if(isset($_REQUEST['professional'])){
+    sentRequest($user_id);
   }
 ?>
 <!DOCTYPE html>
@@ -18,31 +23,29 @@
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">Therapist</a>
+        <a class="navbar-brand" href="#">FEEL GOOD INC</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="profile/profileProfessional.php">Profesional Profile</a>
+            <a class="nav-link" href="../profile/profile-<?php echo $type?>.php">Profile</a>
           </li> 
-         <li class="nav-item">
-            <a class="nav-link" href="profile/profileClient.php">Client Profile</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="../sessions/sessions.php">Your sessions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Connect with a Professional</a>
+            <a class="nav-link" href="#">Connect with a Professional</a>
           </li>
         </ul>
       </div>
     </nav>
-    <div class="container"  id="searchbox">
+    <div id="searchbox">
+    <div class="container">
         <h1>Find a Professional</h1>
         <form action="index.php" method="POST">
           <div class="search">
@@ -97,6 +100,7 @@
       </div>
     </form>
 	</div>
+</div>
   <div id="results">
     <?php 
      if(isset($_REQUEST['Name'])){
@@ -117,13 +121,17 @@
       if($row[6]!=0){
         $specialties=$specialties."Trama ";
       }
-      echo"<div class='container'>
+      echo"<div class='container' style='float:right; width:75%;'>
       <h4>$row[0].$row[1]</h4>
       <div class='row'>
         <div class='col'>
           <p>Location:$row[2]</p>
           <p>Rate: $row[3]</p>
-          <p>Specialties: .$specialties</p>
+          <p>Specialties: $specialties</p>
+          <form action='index.php' method='POST'>
+          <input type='hidden' name='pro' value=$row[4] />
+          <input type='submit' name='professional' value='Request Pairing'>
+          </form>
         </div>
         <div class='col-7'>
           <h5>Bio: $row[11]</h5>

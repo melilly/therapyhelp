@@ -1,4 +1,5 @@
 <?php
+      session_start();
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 $link = mysqli_connect("localhost", "root", "", "therapysite");
@@ -13,10 +14,19 @@ $password = mysqli_real_escape_string($link, $_REQUEST['Password']);
 if($email !="" && $password !=""){
 	echo $email;
 	echo $password;
- 	$sql = "SELECT fName FROM user
+ 	$sql = "SELECT isClient, id FROM user
  		WHERE email='$email' and password='$password'";
 
  	if ($result=mysqli_query($link,$sql)){
+      $Client= $id="";
+      while ($row=mysqli_fetch_row($result))
+      {
+          $Client = $row[0];   
+          $id = $row[1];
+      }
+
+      $_SESSION['user_Type'] = $Client;
+      $_SESSION['id'] = $id;
       echo "<script>window.location = '../index.php'</script>";
   	}
   	else{
